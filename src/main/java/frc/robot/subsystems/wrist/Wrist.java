@@ -130,6 +130,7 @@ public class Wrist extends SubsystemBase {
 
   private void applyStates() {
     var state = currentState;
+    //May change this logic based on testing with its reliability
     if (positions.containsKey(state) && RobotState.getInstance().isAboveL1()) {
       position = positions.get(state).get();
     } else {
